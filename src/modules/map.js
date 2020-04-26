@@ -1,10 +1,11 @@
 import React from 'react';
-import { RenderAfterNavermapsLoaded, NaverMap, Marker} from 'react-naver-maps'
+import { RenderAfterNavermapsLoaded, NaverMap} from 'react-naver-maps'
+import Markers from '../components/map/Markers'
 
 const map = () => {
   const navermaps = window.naver.maps;
   return (
-    <RenderAfterNavermapsLoaded clientId="insertClinetKey">
+    <RenderAfterNavermapsLoaded clientId="insertServiceKey">
     <NaverMap 
       id='maps'
       style={{
@@ -14,12 +15,7 @@ const map = () => {
       defaultCenter={new navermaps.LatLng(37.4969141, 127.0267015)}
       defaultZoom={16}
     >
-      <Marker 
-        position={new navermaps.LatLng(37.4969144, 127.0267018)}
-        onClick={() => {
-          alert('onclick popup 추가')
-        }}
-      />
+      <Markers value={navermaps}/>
     </NaverMap>
  </RenderAfterNavermapsLoaded>
   );
