@@ -15,7 +15,7 @@ const map = () => {
       defaultCenter={new navermaps.LatLng(37.4969141, 127.0267015)}
       defaultZoom={16}
     >
-      <Markers />
+      <Markers map={navermaps}/>
     </NaverMap>
  </RenderAfterNavermapsLoaded>
   );

@@ -2,8 +2,8 @@ import React from 'react';
 import { Marker} from 'react-naver-maps'
 
 
-const Markers = () => {
-    const navermaps = window.naver.maps;
+const Markers = (props) => {
+    const navermaps = props.map;
 
     return (
         <Marker 

@@ -11,3 +11,6 @@ export const UNDO_DELETE_BOOK = 'UNDO_DELETE_BOOK';
 
 export const REMOVE_TOKEN = 'REMOVE_TOKEN';
 export const SET_TOKEN = 'SET_TOKEN';
+
+export const SHOW_MARKERS_ON_MAP = 'SHOW_MARKERS_ON_MAP';
+export const SHOW_DETAIL_ON_MAP = 'SHOW_DETAIL_ON_MAP';
