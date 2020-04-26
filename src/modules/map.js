@@ -5,7 +5,7 @@ import Markers from '../components/map/Markers'
 const map = () => {
   const navermaps = window.naver.maps;
   return (
-    <RenderAfterNavermapsLoaded clientId="insertServiceKey">
+    <RenderAfterNavermapsLoaded clientId="{process.env.REACT_APP_MAP_SERVICE_KEY}">
     <NaverMap 
       id='maps'
       style={{
@@ -15,7 +15,7 @@ const map = () => {
       defaultCenter={new navermaps.LatLng(37.4969141, 127.0267015)}
       defaultZoom={16}
     >
-      <Markers value={navermaps}/>
+      <Markers />
     </NaverMap>
  </RenderAfterNavermapsLoaded>
   );
